@@ -1,0 +1,15 @@
+{
+  "engine": "0.8.0a1",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "principal_dependencies": {
+    "fitdecode": "0.11.0",
+    "defusedxml": "0.7.1",
+    "mcp": "1.30.0",
+    "pytest": "9.1.1",
+    "ruff": "0.17.1",
+    "PyYAML": "6.0.3"
+  },
+  "recorded_utc": "2026-10-20",
+  "not_a_full_lockfile": true
+}

@@ -3,12 +3,19 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "open-endurance-coaching"
-version = "0.1.0"
-description = "Coach-directed endurance workout analytics"
+version = "0.8.0a1"
+description = "Reproducible coach-directed endurance workout analytics and portable AI skill"
 requires-python = ">=3.10"
+dependencies = ["defusedxml>=0.7.1,<1", "fitdecode>=0.11,<0.12", "tzdata>=2025"]
 [project.optional-dependencies]
-dev = ["pytest>=7"]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "PyYAML>=6,<7"]
+mcp = ["mcp>=1.12,<2"]
 [project.scripts]
 oec = "open_endurance_coaching.cli:main"
+oec-mcp = "open_endurance_coaching.server:main"
 [tool.setuptools.packages.find]
 where = ["src"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
